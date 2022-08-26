@@ -7,6 +7,15 @@ from googleapiclient.discovery import build
 
 
 class Connection:
+    """An object to establish connection criteria to the Google Sheets API.
+
+    Please see the README.md in the main package directory for instructions
+    on instantiating this object for the first time.
+
+    Instantiating this object will create the token needed to access the
+    Google Sheets resource. A service object is returned that can be
+    used to read (and only read) from any sheet.
+    """
 
     SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
     SCRIPT_DIR = Path(__module__).parent.absolute()
@@ -31,10 +40,13 @@ class Connection:
                 token.write(self.creds.to_json())
 
     def cred_file_path(self):
+        """Returns the filepath for credentials.json"""
         return str(Connection.CREDS_FILE_PATH)
 
     def token_file_path(self):
+        """Returns the filepath for tokens.json"""
         return str(Connection.TOKEN_FILE_PATH)
 
     def get_service(self):
+        """Uses the object's creds to establish a connection to Google Sheets"""
         return build('sheets', 'v4', credentials=self.creds)
