@@ -7,7 +7,7 @@
 .pytest_cache/
 
 # Credentials bucket
-resources/*
+**/resources/*
 
 # venv-generated items
 Lib/
