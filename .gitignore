@@ -2,8 +2,12 @@
 .vscode/
 *.pyc
 Lib/
+lib/
 etc/
 Include/
+include/
+bin/
+pyvenv.cfg
 Scripts/
 share/
 resources/*
