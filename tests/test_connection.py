@@ -3,10 +3,6 @@ import pytest
 from gpysheets import Connection
 
 
-def test_connection_import_is_successful():
-    assert(True)
-
-
 def test_path_to_creds_file_is_correct():
     connection = Connection()
     expected_path = str(Path(
