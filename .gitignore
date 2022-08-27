@@ -6,9 +6,6 @@
 *.pyc
 .pytest_cache/
 
-# Credentials bucket
-**/resources/*
-
 # venv-generated items
 Lib/
 lib/
