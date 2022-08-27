@@ -12,6 +12,10 @@ class QuerySheet:
     """
 
     SERVICE = Connection().get_service()
+
+    # This works by just making an arbitrarily large range to cover most sheets...
+    # This should be updated to use the maximum dimensions of the sheet,
+    # but the documentation isn't very clear.
     FULL_SHEET_RANGE = "A1:Z400000"
 
     @classmethod
