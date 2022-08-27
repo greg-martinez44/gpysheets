@@ -24,5 +24,5 @@ def test_query_sheet_gets_the_correct_data():
         ["08/26/2022", "3", "IRONY", "green",
             "green", "green", "green", "green", "1"]
     ]
-    actual_data = query_result_map["data"]
+    actual_data = query_result_map["data"][:3]
     assert(expected_data == actual_data)
