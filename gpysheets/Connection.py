@@ -18,7 +18,7 @@ class Connection:
     """
 
     SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
-    SCRIPT_DIR = Path(__module__).parent.absolute()
+    SCRIPT_DIR = Path(__file__).parent.parent.absolute()
     CREDS_FILE_PATH = Path(SCRIPT_DIR, "resources", "credentials.json")
     TOKEN_FILE_PATH = Path(SCRIPT_DIR, "resources", "token.json")
 
