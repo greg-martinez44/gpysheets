@@ -1,1 +1,1 @@
-from gpysheets import QuerySheet
+from gpysheets.QuerySheet import QuerySheet
